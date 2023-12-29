@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Calender from "../src/components/Calender";
+import EventList from "./components/EventList";
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
+import "./styles.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div id="header-container" className="header-container">
+        {/* <CompanyLogoFile /> */}
+        <Header />
+      </div>
+      <div className="dashboard-container">
+        <SideBar />
+        <div className="head-foot-part" >
+          <div style={{ display: "flex" }} >
+            <div className="events-list-cal"  >
+           <EventList/>
+            
+            </div>
+            <Calender />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
