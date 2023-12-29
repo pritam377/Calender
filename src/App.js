@@ -1,30 +1,13 @@
-import "./App.css";
-import Calender from "../src/components/Calender";
-import EventList from "./components/EventList";
-import React, { useEffect } from "react";
-import Header from "./components/Header";
-import SideBar from "./components/SideBar";
+import React from "react";
 import "./styles.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "/node_modules/bootstrap/dist/js/bootstrap.min.js";
+import MainRouting from "./components/MainRouting";
 
 function App() {
   return (
-    <div>
-      <div id="header-container" className="header-container">
-        {/* <CompanyLogoFile /> */}
-        <Header />
-      </div>
-      <div className="dashboard-container">
-        <SideBar />
-        <div className="head-foot-part" >
-          <div style={{ display: "flex" }} >
-            <div className="events-list-cal"  >
-           <EventList/>
-            
-            </div>
-            <Calender />
-          </div>
-        </div>
-      </div>
+    <div className="App">
+      <MainRouting />
     </div>
   );
 }
